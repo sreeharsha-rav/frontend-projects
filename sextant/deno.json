@@ -1,0 +1,16 @@
+{
+    "tasks": {
+      "start-server": "deno run --allow-net ./websocket_server.ts",
+      "start-client": "deno run --allow-net ./websocket_client.ts"
+    },
+    "lint": {
+        "include": ["src/"],
+        "exclude": ["src/testdata/", "src/fixtures/**/*.ts"],
+        "rules": {
+        "tags": ["recommended"],
+        "include": ["ban-untagged-todo"],
+        "exclude": ["no-unused-vars"]
+        }
+    }
+}
+  
