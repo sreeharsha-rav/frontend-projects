@@ -1,25 +1,27 @@
-import { useSignal } from "@preact/signals";
-import Counter from "../islands/Counter.tsx";
+import { Banner } from "../components/Banner.tsx";
+import { Exhibit } from "../components/Exhibit.tsx";
+import { AddressDisplay } from "../islands/AddressDisplay.tsx";
+import { PacketLatency } from "../islands/PacketLatency.tsx";
 
 export default function Home() {
-  const count = useSignal(3);
+  
   return (
-    <div class="px-4 py-8 mx-auto bg-[#86efac]">
-      <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
-        <img
-          class="my-6"
-          src="/logo.svg"
-          width="128"
-          height="128"
-          alt="the Fresh logo: a sliced lemon dripping with juice"
-        />
-        <h1 class="text-4xl font-bold">Welcome to Fresh</h1>
-        <p class="my-4">
-          Try updating this message in the
-          <code class="mx-2">./routes/index.tsx</code> file, and refresh.
-        </p>
-        <Counter count={count} />
+    <div class="p-4">
+      <Banner title="Sextant"/>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <Exhibit title="Your IPv4 Address">
+          <AddressDisplay url="https://api.ipify.org?format=json" />
+        </Exhibit>
+        <Exhibit title="Your IPv6 Address">
+          <AddressDisplay url="https://api64.ipify.org?format=json" />
+        </Exhibit>
       </div>
+
+      <Exhibit title="Packet Latency">
+          <PacketLatency />
+      </Exhibit>
+
     </div>
   );
 }
