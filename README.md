@@ -16,5 +16,10 @@ My current focus is on building projects using TypeScript, Angular, and Next.js.
 
 ## Projects
 
-- **[`Next.js Dashboard`]**(): A dashboard built using Next.js and Tailwind CSS.
-- **[`Sextant`]**(): A single-page application built using Fresh and Deno that displays the IP address and latency of a network.
+#### [Next.js Dashboard]()
+A dashboard built with Next.js, Tailwind CSS, and Postgres. It's a simple, responsive dashboard referenced from the Learn Next.js course from Vercel. It's a great starting point for building your own dashboard.
+- **Technologies Used**: Next.js, Tailwind CSS, Postgres, Vercel
+
+#### [Sextant]()
+A single-page application built using Fresh and Deno that displays the IP address and latency of a network.
+- **Technologies Used**: Fresh, Deno, HTML, CSS
