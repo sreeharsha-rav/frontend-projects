@@ -6,6 +6,10 @@ My current focus is on building projects using TypeScript, Angular, and Next.js.
 
 ## Projects
 
+### [Tic Tac Toe](./tic-tac-toe/)
+A simple Tic Tac Toe game built using React.js. Play against a friend or the computer. Has a score tracker and a reset button.
+- **Technologies Used**: React.js, TypeScript, HTML, Tailwind CSS
+
 ### [Foodie Finder](./foodie_finds/)
 Feeling hungry and adventurous? Foodie Finder is your culinary sidekick, helping you hunt down fantastic dining spots in your neighborhood. Whether you're a foodie pro or just looking for your next yummy meal, this app's got your back.
 - **Technologies Used**: React.js, Yelp API, HTML, CSS
@@ -13,6 +17,10 @@ Feeling hungry and adventurous? Foodie Finder is your culinary sidekick, helping
 ### [Playlistify](./playlistify/)
 If you're all about the beats, check out Playlistify. It's a Single Page Web App (SPA) that lets you groove through Spotify's music library. Craft custom playlists and save 'em right to your Spotify account. Share your musical vibe or discover new tracks – whatever floats your musical boat!
 - **Technologies Used**: React.js, Spotify API, OAuth, HTML, Tailwind CSS
+
+### [Reddit Minimal](./reddit-minimal/) - Coming Soon
+A minimalistic Reddit client built using React.js. It's a simple, clean, and responsive web app that lets you browse Reddit posts and comments.
+- **Technologies Used**: React.js, React Server Components, TypeScript, Reddit API, HTML, Tailwind CSS
 
 ### [Next.js Dashboard](./nextjs-dashboard/)
 A dashboard built with Next.js, Tailwind CSS, and Postgres. It's a simple, responsive dashboard referenced from the Learn Next.js course from Vercel. It's a great starting point for building your own dashboard.
