@@ -1,5 +1,5 @@
 const styles = {
-    square: "w-16 h-16 text-4xl font-bold text-center border hover:bg-gray-100 active:bg-gray-200",
+    square: "w-16 h-16 bg-card-foreground text-primary-foreground flex justify-center items-center text-4xl font-bold rounded-md cursor-pointer hover:bg-accent hover:text-accent-foreground transition-colors",
 };
 
 /**

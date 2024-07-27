@@ -1,11 +1,13 @@
 import Board from "./Board";
 import { useEffect, useState } from "react";
+import Score from "./Score";
 
 const styles = {
-    wrapper: "flex flex-col items-center space-y-4 mt-8",
+    wrapper: "flex flex-col items-center space-y-4",
     title: "text-2xl font-bold",
+    status_wrapper: "flex justify-center items-center space-x-4",
     subtitle: "text-lg font-medium",
-    reset_button: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded",
+    reset_button: "text-blue-500 font-bold hover:underline active:text-blue-700",
 };
 
 /**
@@ -15,17 +17,21 @@ const styles = {
  * 
  * @param {Object} props
  * @param {boolean} props.aiOpponent - Whether the game should have an AI opponent.
- * @param {Function} props.onGameEnd - The function to call when the game ends.
+ * 
+ * @see {@link Board}
+ * @see {@link Score}
  * 
  * @returns {JSX.Element} The rendered Tic Tac Toe component.
  * 
  * @example
  * <TicTacToe aiOpponent={true} onGameEnd={(winner) => console.log("Game ended! Winner:", winner)} />
  */
-export default function TicTacToe({ aiOpponent = false, onGameEnd }: { aiOpponent?: boolean, onGameEnd: (winner: string | null) => void }) {
+export default function TicTacToe({ aiOpponent = false }: { aiOpponent?: boolean }) {
     const [board, setBoard] = useState<(null | string)[]>(Array(9).fill(null));
     const [currentPlayer, setCurrentPlayer] = useState("X");
     const [gameOver, setGameOver] = useState(false);
+    const [xWins, setXWins] = useState(0);
+    const [oWins, setOWins] = useState(0);
 
     useEffect(() => {
         if (aiOpponent && currentPlayer === "O" && !gameOver) {
@@ -62,7 +68,11 @@ export default function TicTacToe({ aiOpponent = false, onGameEnd }: { aiOpponen
         const winner = calculateWinner(newBoard);
         if (winner) {
             setGameOver(true);
-            onGameEnd(winner);
+            if (winner === "X") {
+                setXWins(xWins + 1);
+            } else {
+                setOWins(oWins + 1);
+            }
         } else if (newBoard.every((square) => square !== null)) {
             setGameOver(true);
         } else {
@@ -124,19 +134,16 @@ export default function TicTacToe({ aiOpponent = false, onGameEnd }: { aiOpponen
     return (
         <div className={styles.wrapper}>
             <h1 className={styles.title}>Tic Tac Toe</h1>
-
-            {/* Status */}
-            <div className={styles.subtitle}>{getStatus()}</div>
-                
-            {/* Board */}
-            <Board board={board} handleClick={handleClick}/>
-
-            {/* Reset Button */}
-            {gameOver && (
+            <div className={styles.status_wrapper}>
+                <p className={styles.subtitle}>{getStatus()}</p>
+                {gameOver && (
                 <button className={styles.reset_button} onClick={resetGame}>
                     Play Again
                 </button>
-            )}
+                )}
+            </div>
+            <Board board={board} handleClick={handleClick}/>
+            <Score x_wins={xWins} o_wins={oWins} />
         </div>
     );
 }

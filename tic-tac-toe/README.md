@@ -12,9 +12,8 @@ A simple Tic Tac Toe game in React with a computer opponent.
 ## Features
 
 - Play against a computer opponent
-- Choose your side
 - Play again after the game is over
-- See the game history
+- See the game score
 
 ## Technologies
 
@@ -22,6 +21,11 @@ A simple Tic Tac Toe game in React with a computer opponent.
 - TypeScript
 - Tailwind CSS
 - Vite
+
+## Future Improvements
+
+- [ ] Add a difficulty setting for the computer opponent
+- [ ] Ability to choose X or O
 
 ## Credits
 

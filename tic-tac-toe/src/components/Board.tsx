@@ -15,6 +15,8 @@ const styles = {
  * @param {string[]} props.board - The current state of the board.
  * @param {Function} props.handleClick - The function to call when a square is clicked.
  * 
+ * @see {@link Square}
+ * 
  * @returns {JSX.Element} The rendered Board component.
  * 
  * @example
