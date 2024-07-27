@@ -2,6 +2,8 @@
 
 A simple Tic Tac Toe game in React with a computer opponent.
 
+![Tic Tac Toe](./public/tictactoe-ezgif.gif)
+
 ## Installation
 
 1. Clone the repository
