@@ -1,27 +1,57 @@
 # AngularApps
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
+This is a monorepo for Angular applications. Each application is a separate Angular project.
 
-## Development server
+This project was generated with [Angular CLI](https://angular.dev/cli) version 18.1.3.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Applications
 
-## Code scaffolding
+### [TodoList](./projects/todo-list/README.md)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+A simple todo list application that allows users to add, edit, and delete tasks.
 
-## Build
+### [House Listing](./projects/house-list/README.md)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+A house listing application that allows users to view a list of houses and their details.
 
-## Running unit tests
+## Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- [Node.js](https://nodejs.org/en/)
+- [Angular CLI](https://angular.dev/cli)
+- [pnpm](https://pnpm.io/)
 
-## Running end-to-end tests
+## Getting Started
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Installation
 
-## Further help
+1. Clone the repository
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+git clone
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Navigate to the appropriate project directory
+
+```bash
+cd projects/<project-name>
+```
+
+### Running the Applications
+
+1. Run the Angular CLI development server
+
+```bash
+ng serve
+```
+
+2. Navigate to `http://localhost:4200/` in your browser
+
+## Credits
+
+- [Angular Documentation](https://angular.dev/)

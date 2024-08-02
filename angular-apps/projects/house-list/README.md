@@ -2,7 +2,7 @@
 
 A house listing application that allows users to view a list of house for rent and their details.
 
-![House Listing](./public/house-listing.gif) - update this with the actual gif
+![House Listing](./public/house-list.gif)
 
 ## Features
 
