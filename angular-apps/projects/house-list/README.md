@@ -16,6 +16,10 @@ A house listing application that allows users to view a list of house for rent a
 ### Installation
 
 1. Follow the instructions in the [README.md](../../README.md) file to clone the repository and install dependencies.
+```bash
+git clone
+pnpm install
+```
 2. Navigate to the `projects/house-list` directory.
 
 ### Running the Application
