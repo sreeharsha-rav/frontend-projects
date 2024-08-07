@@ -44,3 +44,7 @@ A simple minimalistic Reddit client built using Next.js and Tailwind CSS.
 ### [Sextant](./sextant/)
 A single-page application built using Fresh and Deno that displays the IP address and latency of a network.
 - **Technologies Used**: Fresh, Deno, HTML, CSS
+
+### [Pokemon GraphQL](./pokemon-graphql/README.md)
+This is a simple GraphQL client for the Pokémon API. It displays a list of Pokémon and their details from a GraphQL server.
+- **Technologies Used**: React (TypeScript + Vite), GraphQL, Apollo, Tailwind CSS, pnpm, Pokemon open API
