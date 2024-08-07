@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { loadPreline } from './utils/prelineInit';
 import ThemeToggle from './components/ThemeToggle';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import PokemonContainer from './containers/PokemonContainer';
 
 function App() {
 
@@ -13,16 +15,21 @@ function App() {
     initNewElements()
   }, [])
 
+  const client = new ApolloClient({
+    uri: 'https://graphql-pokemon2.vercel.app',
+    cache: new InMemoryCache(),
+  });
+
   return (
     <div>
       {/* Dark Mode Toggle */}
       <ThemeToggle />
-      <h1 className="text-4xl dark:text-white">h1. Preline heading</h1>
-      <h2 className="text-3xl dark:text-white">h2. Preline heading</h2>
-      <h3 className="text-2xl dark:text-white">h3. Preline heading</h3>
-      <h4 className="text-xl dark:text-white">h4. Preline heading</h4>
-      <h5 className="text-lg dark:text-white">h5. Preline heading</h5>
-      <h6 className="text-base dark:text-white">h6. Preline heading</h6>
+
+      <ApolloProvider client={client}>
+        <main>
+          <PokemonContainer />
+        </main>
+      </ApolloProvider>
     </div>
   );
 }

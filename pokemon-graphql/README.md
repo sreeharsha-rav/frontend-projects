@@ -1,11 +1,8 @@
 # Pokemon GraphQL
 
-This is a simple GraphQL client for the Pokémon API. It allows you to get a list of Pokémon and get a single Pokémon by name or ID.
+This is a simple GraphQL client for the Pokémon API. It displays a list of Pokémon and their details from a GraphQL server.
 
-## Features
-
-- Get a list of Pokémon
-- Get a single Pokémon by name or ID
+![Pokemon GraphQL](./public/pokemon-graphql.png)
 
 ## Getting Started
 
@@ -15,8 +12,31 @@ This is a simple GraphQL client for the Pokémon API. It allows you to get a lis
 - GraphQL
 - Apollo
 - Tailwind CSS
+- pnpm
 - Pokemon open API
 
-### Development
+### Installation
 
+1. Clone the repository:
 
+```bash
+git clone
+```
+
+2. Install the dependencies:
+
+```bash
+pnpm install
+```
+
+3. Start the development server:
+
+```bash
+pnpm dev
+```
+
+4. Open the browser and navigate to `http://localhost:5173`.
+
+## Credits
+
+- [Pokémon GraphQL](https://graphql-pokeapi.vercel.app/) - Pokémon GraphQL API
