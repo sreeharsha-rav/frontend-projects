@@ -16,7 +16,7 @@ function App() {
     <>
       <main className={styles.main}>
         <div className={styles.content}>
-          <Feed subreddit="all" sort="hot" />
+          <Feed subreddit="popular" sort="hot" />
         </div>
       </main>
     </>

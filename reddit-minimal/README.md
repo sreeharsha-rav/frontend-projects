@@ -1,30 +1,120 @@
-# React + TypeScript + Vite
+# Reddit Minimal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimalist Reddit client built with React, TypeScript, and React Router. This application allows users to browse Reddit posts, view post details, and read comments asynchronously.
 
-Currently, two official plugins are available:
+![Reddit-Minimal](public/reddit-minimal.gif)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Structure
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```
+reddit-client/
+│
+├── src/
+│   ├── assets/                         # Contains static assets such as images and icons used in the application.
+│   ├── components/                     # Contains reusable React components used throughout the application.
+│   │   ├── common/                     # Contains common components used across different parts of the application.
+│   │   │   ├── ErrorPage.tsx           # Component for displaying an error page.
+│   │   │   ├── Loader.tsx              # Component for displaying a loading spinner.
+│   │   │   └── Header.tsx              # Component for the application header.
+│   │   ├── feed/                       # Contains components related to browsing Reddit posts.
+│   │   │   ├── actions.tsx             # Component for performing actions on a post (e.g., upvoting, saving).
+│   │   │   ├── info.tsx                # Component for displaying post information (e.g., title, author, score).
+│   │   │   ├── post-preview.tsx        # Component for displaying a preview of a post.
+│   │   │   ├── vote.tsx                # Component for voting on a post.
+│   │   │   └── Feed.tsx                # Component for displaying a feed of Reddit posts.
+│   │   ├── post/                       # Contains components related to viewing post details.
+│   │   │   ├── Post.tsx                # Component for displaying the details of a post.
+│   │   │   └── PostSkeleton.tsx        # Component for displaying a skeleton loading state for a post.
+│   │   ├── ui/                         # Contains UI-related components and utilities.
+│   │   │   └── icons.tsx               # Component for rendering icons.
+│   ├── hooks/                          # Contains custom React hooks used in the application.
+│   │   ├── useFetchPosts.ts            # Hook for fetching Reddit posts.
+|   |   ├── useFetchPostDetails.ts      # Hook for fetching details of a Reddit post.
+│   │   └── useFetchComments.ts         # Hook for fetching comments for a Reddit post.
+│   ├── services/                       # Contains services for interacting with external APIs.
+│   │   └── redditApi.ts                # Service for making API requests to the Reddit API.
+│   ├── types/                          # Contains TypeScript type definitions used in the application.
+│   │   └── subreddit.ts                # Type definition for a subreddit.
+│   ├── App.tsx                         # The main component that serves as the entry point for the application.
+│   ├── index.css                       # CSS file for styling the application.
+│   └── main.tsx                        # The main file that renders the React application.
+|
+├── index.html                          # The HTML file that serves as the entry point for the application.
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Components
+
+- `ErrorPage.tsx`: Component for displaying an error page.
+- `Loader.tsx`: Component for displaying a loading spinner.
+- `Header.tsx`: Component for the application header.
+- `actions.tsx`: Component for performing actions on a post (e.g., upvoting, saving).
+- `info.tsx`: Component for displaying post information (e.g., title, author, score).
+- `post-preview.tsx`: Component for displaying a preview of a post.
+- `vote.tsx`: Component for voting on a post.
+- `Feed.tsx`: Component for displaying a feed of Reddit posts.
+- `Post.tsx`: Component for displaying the details of a post.
+- `PostSkeleton.tsx`: Component for displaying a skeleton loading state for a post.
+- `icons.tsx`: Component for rendering icons.
+
+### Hooks
+
+- `useFetchPosts.ts`: Hook for fetching Reddit posts.
+- `useFetchPostDetails.ts`: Hook for fetching details of a Reddit post.
+- `useFetchComments.ts`: Hook for fetching comments for a Reddit post.
+
+### Services
+
+- `redditApi.ts`: Service for making API requests to the Reddit API.
+
+### Types
+
+- `subreddit.ts`: Type definition for a subreddit.
+
+### Features
+
+- Browse Reddit posts from various subreddits
+- View detailed post information
+- Asynchronous loading of comments
+- Responsive design for mobile and desktop
+- Error handling and loading states
+
+## Getting Started
+
+1. Clone the repository:
+  ```
+  git clone https://github.com/
+  cd reddit-minimal
+  ```
+
+2. Install dependencies:
+  ```
+  pnpm install
+  ```
+
+3. Start the development server:
+  ```
+  pnpm dev
+  ```
+
+4. Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+### Available Scripts
+
+- `pnpm dev`: Runs the app in development mode
+
+### Technologies Used
+
+- React
+- TypeScript
+- React Router
+- Preline UI (for styling)
+- pnpm (for package management)
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
+
