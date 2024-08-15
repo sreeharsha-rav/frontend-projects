@@ -104,11 +104,14 @@ v 0.1.0
 v 0.2.0
 - [x] Manage state with container components
 - [x] Add sorting and filtering options for posts
-- [ ] Add virtual scrolling for better performance using react-window
-- [ ] Add asynchronous generators for fetching posts (infinite scrolling)
 - [x] Performance optimizations using React.memo and useMemo
 
 v 0.3.0
+- [ ] Improve loading states with loading skeletons and suspense
+- [ ] Add virtual scrolling for better performance using react-window
+- [ ] Add asynchronous generators for fetching posts (infinite scrolling)
+
+v 0.4.0
 - [ ] Design Post Details page
 - [ ] Asynchronous loading of comments for Post Details
 - [ ] Add support for sharing posts
