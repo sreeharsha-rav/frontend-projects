@@ -1,4 +1,4 @@
-import Feed from "./components/feed/feed";
+import Feed from "./components/feed/Feed";
 
 const styles = {
   main: `mx-auto flex w-full max-w-5xl flex-1 space-x-6 py-5 px-6 items-center justify-center`,
@@ -16,7 +16,7 @@ function App() {
     <>
       <main className={styles.main}>
         <div className={styles.content}>
-          <Feed subreddit="popular" sort="hot" />
+          <Feed subreddit="popular"/>
         </div>
       </main>
     </>

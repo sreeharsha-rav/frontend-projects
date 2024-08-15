@@ -23,7 +23,7 @@ interface PostProps {
 
 const styles = {
     post: 'flex flex-wrap flex-col justify-center align-middle',
-    wrapper: 'flex space-x-3 rounded-lg bg-card p-2 border hover:bg-muted',
+    wrapper: 'flex space-x-3 rounded-lg bg-card p-2 border hover:bg-neutral-100',
     title: 'p-2 flex flex-wrap text-2xl font-semibold hover:text-blue-500',
     content: 'p-3 flex flex-col space-y-2 justify-center items-center align-middle',
     description: '-mt-2 text-sm text-muted-foreground max-h-20 text-ellipsis overflow-hidden',

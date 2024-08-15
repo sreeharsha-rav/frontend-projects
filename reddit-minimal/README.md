@@ -114,6 +114,30 @@ reddit-client/
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+### Roadmap
+
+v 0.1.0
+- [x] Fetch Reddit posts from the Reddit API
+- [x] Display a feed of Reddit posts
+- [x] Routing to view post details
+- [x] Error handling and loading states
+- [x] Error Page for 404
+
+v 0.2.0
+- [ ] Manage state with Redux or Context API for better performance
+- [ ] Add sorting and filtering options for posts
+- [ ] Add virtual scrolling for better performance using react-window
+- [ ] Add asynchronous generators for fetching posts (infinite scrolling)
+- [ ] Performance optimizations using React.memo and useMemo
+
+v 0.3.0
+- [ ] Design Post Details page
+- [ ] Asynchronous loading of comments for Post Details
+- [ ] Add support for sharing posts
+- [ ] Add tests for components and hooks
+- [ ] Deploy the application to Github Pages
+- [ ] Setup CI/CD pipeline with GitHub Actions
+
 ## License
 
 This project is licensed under the MIT License.
