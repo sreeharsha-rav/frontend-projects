@@ -8,16 +8,16 @@ import { Link } from 'react-router-dom';
  * Represents the properties of a post.
  */
 interface PostProps {
-    subreddit: string;
     title: string;
     author: string;
-    imageUrl: string;
+    subreddit: string;
     score: number;
-    // ups: number;
-    // downs: number;
-    numComments: number;
-    createdAt: number;
+    ups: number;
+    downs: number;
+    num_comments: number;
+    created_utc: number;
     selftext: string;
+    url: string;
     id: string;
 }
 
@@ -38,85 +38,75 @@ const styles = {
  * @param {string} props.imageUrl - The URL of the image.
  * @returns {JSX.Element} The rendered post image component.
  */
-const PostImage = ({ imageUrl }: { imageUrl: string }) => {
-    return (
-        <div className={styles.image}>
-            <img
-                src={imageUrl}
-                alt="Post Image"
-                width={500}
-                height={500}
-            />
-        </div>
-    );
-}
+const PostImage: React.FC<{ imageUrl: string }> = React.memo(({ imageUrl }) => (
+    <div className={styles.image}>
+        <img
+            src={imageUrl}
+            alt="Post Image"
+            width={500}
+            height={500}
+        />
+    </div>
+));
 
 /**
  * Represents a post preview component.
  *
  * @component
  * @param {Object} props - The props object.
- * @param {string} props.subreddit - The subreddit of the post.
  * @param {string} props.title - The title of the post.
  * @param {string} props.author - The author of the post.
- * @param {string} props.imageUrl - The URL of the post image.
+ * @param {string} props.subreddit - The subreddit of the post.
  * @param {number} props.score - The score of the post.
- * @param {number} props.numComments - The number of comments on the post.
- * @param {string} props.createdAt - The creation date of the post.
+ * @param {number} props.num_comments - The number of comments on the post.
+ * @param {number} props.created_utc - The creation timestamp of the post.
  * @param {string} props.selftext - The selftext of the post.
+ * @param {string} props.url - The URL of the post.
  * @param {string} props.id - The ID of the post.
  * @returns {JSX.Element} The rendered post preview component.
  */
-const Post: React.FC<PostProps> = (
-    { 
-        subreddit, 
-        title, 
-        author, 
-        imageUrl,
-        score,
-        // ups,
-        // downs, 
-        numComments, 
-        createdAt,
-        selftext,
-        id,
-    }: PostProps
-) => {
+const Post: React.FC<PostProps> = React.memo(({ 
+    subreddit, 
+    title, 
+    author, 
+    url, // Use this instead of imageUrl
+    score,
+    // ups,
+    // downs, 
+    num_comments, // Use this instead of numComments
+    created_utc, // Use this instead of createdAt
+    selftext,
+    id,
+}: PostProps) => {
 
     // Check if the post has a selftext
     const hasSelftext = selftext.length > 0;
     // Check if the image URL contains a valid image extension
-    const isImage = (imageUrl.match(/\.(jpeg|jpg|gif|png)$/) != null);
+    const isImage = (url.match(/\.(jpeg|jpg|gif|png)$/) != null);
 
     return (
         <div className={styles.wrapper}>
-            <Vote score={score} />
+            <Vote initialScore={score} />
             <div className={styles.post}>
                 <Info 
                     subreddit={subreddit} 
                     author={author} 
-                    createdAt={createdAt}
+                    createdAt={created_utc}
                 />
                 <h2 className={styles.title}>
-                    <Link 
-                        to={{
-                            pathname: `/post/${id}`
-                        }}
-                    >
+                    <Link to={{pathname: `/post/${id}`}}>
                         {title}
                     </Link>
                 </h2>
-                
-                
                 <div className={styles.content}>
                     {hasSelftext && <p className={styles.description}>{selftext}</p>}
-                    {isImage && <PostImage imageUrl={imageUrl} />}
+                    {isImage && <PostImage imageUrl={url} />}
                 </div>
 
-                <Actions numComments={numComments}/>
+                <Actions numComments={num_comments}/>
             </div>
         </div>
     );
-};
+});
 
 export default Post;

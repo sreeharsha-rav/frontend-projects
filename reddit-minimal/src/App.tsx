@@ -1,4 +1,4 @@
-import Feed from "./components/feed/Feed";
+import FeedContainer from "./containers/FeedContainer";
 
 const styles = {
   main: `mx-auto flex w-full max-w-5xl flex-1 space-x-6 py-5 px-6 items-center justify-center`,
@@ -6,21 +6,19 @@ const styles = {
 };
 
 /**
- * The main component of the application.
+ * Represents the main application component.
  *
- * @returns The rendered JSX element.
+ * @component
+ * @returns {JSX.Element} The rendered main application component.
  */
-function App() {
-
+const App: React.FC = () => {
   return (
-    <>
       <main className={styles.main}>
         <div className={styles.content}>
-          <Feed subreddit="popular"/>
+          <FeedContainer subreddit="ProgrammerHumor" />
         </div>
       </main>
-    </>
-  )
-}
+  );
+};
 
 export default App;

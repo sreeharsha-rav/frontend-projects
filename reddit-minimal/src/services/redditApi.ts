@@ -20,12 +20,9 @@ const api = axios.create({
 export const fetchPosts = async (subreddit: string, sort: string = ''): Promise<SubredditPost[]> => {
     try {
       const url = sort ? `/r/${subreddit}/${sort}.json` : `/r/${subreddit}.json`;
-      console.log(`Fetching ${sort || 'standard'} posts from ${url}...`);
   
       const response = await api.get(url);
       const data = response.data;
-  
-      console.log(`Fetched ${sort || 'standard'} posts:`, data);
   
       return data.data.children.map((child: any) => {         // any type is used here
         const post = child.data;

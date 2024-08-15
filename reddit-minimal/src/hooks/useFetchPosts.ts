@@ -3,7 +3,7 @@ import { SubredditPost } from '../types/subreddit';
 import { fetchPosts } from '../services/redditApi';
 
 // Define the possible sorting options for posts
-type PostSort = '' | 'new' | 'hot' | 'top';
+type SortOption = '' | 'new' | 'hot' | 'top';
 
 /**
  * Custom hook for fetching posts from a subreddit.
@@ -12,7 +12,7 @@ type PostSort = '' | 'new' | 'hot' | 'top';
  * @param sort - The sorting option for the fetched posts (optional).
  * @returns An object containing the fetched posts, loading state, and error message (if any).
  */
-const useFetchPosts = (subreddit: string, sort: PostSort = '') => {
+const useFetchPosts = (subreddit: string, sort: SortOption = '') => {
   const [posts, setPosts] = useState<SubredditPost[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
