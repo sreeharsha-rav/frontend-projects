@@ -48,3 +48,7 @@ A single-page application built using Fresh and Deno that displays the IP addres
 ### [Pokemon GraphQL](./pokemon-graphql/README.md)
 This is a simple GraphQL client for the Pokémon API. It displays a list of Pokémon and their details from a GraphQL server.
 - **Technologies Used**: React (TypeScript + Vite), GraphQL, Apollo, Tailwind CSS, pnpm, Pokemon open API
+
+## [Snapstash](./snapstash/)
+Snapstash is a simple chrome extension that allows users to save and organize their favorite websites. It's a great tool for saving links to articles, videos, or any other content you want to revisit later.
+- **Technologies Used**: Chrome Extension, JavaScript, HTML, CSS
