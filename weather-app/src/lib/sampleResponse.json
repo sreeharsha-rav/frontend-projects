@@ -1,0 +1,132 @@
+{
+  "search_location_autocomplete": [
+    {
+      "id": 2801268,
+      "name": "London",
+      "region": "City of London, Greater London",
+      "country": "United Kingdom",
+      "lat": 51.52,
+      "lon": -0.11,
+      "url": "london-city-of-london-greater-london-united-kingdom"
+    },
+    {
+      "id": 315398,
+      "name": "London",
+      "region": "Ontario",
+      "country": "Canada",
+      "lat": 42.98,
+      "lon": -81.25,
+      "url": "london-ontario-canada"
+    },
+    {
+      "id": 2610925,
+      "name": "Londonderry",
+      "region": "New Hampshire",
+      "country": "United States of America",
+      "lat": 42.87,
+      "lon": -71.37,
+      "url": "londonderry-new-hampshire-united-states-of-america"
+    }
+  ],
+
+  "sample_forecast": {
+    "location": {
+      "name": "London",
+      "region": "City of London, Greater London",
+      "country": "United Kingdom",
+      "lat": 51.52,
+      "lon": -0.11,
+      "tz_id": "Europe/London",
+      "localtime_epoch": 1724456483,
+      "localtime": "2024-08-24 00:41"
+    },
+    "current": {
+      "last_updated_epoch": 1724455800,
+      "last_updated": "2024-08-24 00:30",
+      "temp_c": 16.1,
+      "temp_f": 61.0,
+      "is_day": 0,
+      "condition": {
+        "text": "Overcast",
+        "icon": "//cdn.weatherapi.com/weather/64x64/night/122.png",
+        "code": 1009
+      },
+      "wind_kph": 15.1,
+      "wind_dir": "SSW",
+      "precip_mm": 0.0,
+      "humidity": 72,
+      "feelslike_c": 16.1,
+      "uv": 1.0
+    },
+    "forecast": {
+      "forecastday": [
+        {
+          "date": "2024-08-24",
+          "date_epoch": 1724457600,
+          "day": {
+            "maxtemp_c": 16.8,
+            "mintemp_c": 12.4,
+            "avgtemp_c": 14.7,
+            "maxwind_kph": 19.1,
+            "totalprecip_mm": 7.93,
+            "avghumidity": 82,
+            "daily_will_it_rain": 1,
+            "daily_chance_of_rain": 95,
+            "daily_will_it_snow": 0,
+            "daily_chance_of_snow": 0,
+            "condition": {
+              "text": "Moderate rain",
+              "icon": "//cdn.weatherapi.com/weather/64x64/day/302.png",
+              "code": 1189
+            },
+            "uv": 3.0
+          }
+        },
+        {
+          "date": "2024-08-25",
+          "date_epoch": 1724544000,
+          "day": {
+            "maxtemp_c": 19.9,
+            "mintemp_c": 11.0,
+            "avgtemp_c": 15.4,
+            "maxwind_kph": 23.8,
+            "totalprecip_mm": 0.0,
+            "avghumidity": 65,
+            "daily_will_it_rain": 0,
+            "daily_chance_of_rain": 0,
+            "daily_will_it_snow": 0,
+            "daily_chance_of_snow": 0,
+            "condition": {
+              "text": "Partly Cloudy",
+              "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+              "code": 1003
+            },
+            "uv": 4.0
+          }
+        },
+        {
+          "date": "2024-08-26",
+          "date_epoch": 1724630400,
+          "day": {
+            "maxtemp_c": 22.8,
+            "mintemp_c": 14.1,
+            "avgtemp_c": 18.3,
+            "maxwind_kph": 16.6,
+            "totalprecip_mm": 0.03,
+            "avghumidity": 65,
+            "daily_will_it_rain": 0,
+            "daily_chance_of_rain": 0,
+            "daily_will_it_snow": 0,
+            "daily_chance_of_snow": 0,
+            "condition": {
+              "text": "Partly Cloudy",
+              "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+              "code": 1003
+            },
+            "uv": 4.0
+          }
+        }
+      ]
+    }
+  }
+}

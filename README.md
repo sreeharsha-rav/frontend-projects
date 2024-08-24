@@ -2,7 +2,7 @@
 
 This repository contains the projects I have worked on as a frontend developer. The projects are built using various frontend technologies and frameworks such as React.js, Angular, Next.js, and Fresh.
 
-My current focus is on building projects using TypeScript, Angular, and Next.js.
+My current focus is on building projects using TypeScript, Angular, Vue, React.js, and Next.js.
 
 ## Projects
 
@@ -52,3 +52,7 @@ This is a simple GraphQL client for the Pok√©mon API. It displays a list of Pok√
 ## [Snapstash](./snapstash/)
 Snapstash is a simple chrome extension that allows users to save and organize their favorite websites. It's a great tool for saving links to articles, videos, or any other content you want to revisit later.
 - **Technologies Used**: Chrome Extension, JavaScript, HTML, CSS
+
+## [Weather App](./weather-app/README.md)
+A simple weather app that displays the current weather and forecast for a location. It uses the OpenWeatherMap API to fetch weather data.
+- **Technologies Used**: Vue3, TypeScript, Vite, OpenWeatherMap API, HTML, CSS
