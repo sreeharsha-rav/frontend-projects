@@ -15,3 +15,11 @@
 | [Snapstash](./snapstash/) | Snapstash is a simple chrome extension that allows users to save and organize their favorite websites. It's a great tool for saving links to articles, videos, or any other content you want to revisit later. | `Chrome Extension`, `JavaScript`, `HTML`, `CSS` |
 | [Weather App](./weather-app/README.md) | A simple weather app that displays the current weather and forecast for a location. It uses the OpenWeatherMap API to fetch weather data. | `Vue3`, `TypeScript`, `Vite`, `WeatherMap API`, `HTML`, `CSS` |
 | [Expense Tracker](./expense-tracker/README.md) | A simple expense tracker built using Vue.js. It allows users to add and delete expenses. It also displays a summary of the total expenses. | `Vue.js`, `TypeScript`, `Vite`, `HTML`, `CSS` |
+
+## Contributing
+
+Feel free to open an issue or submit a pull request for any bugs, improvements or new features you would like to see implemented.
+
+## LICENSE
+
+[MIT](./LICENSE)
