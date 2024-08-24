@@ -2,7 +2,7 @@
 
 A simple expense tracker built with Vue 3 and TypeScript.
 
-![Expense Tracker](./public/expense_tracker.gif)
+![Expense Tracker](./expense_tracker.gif)
 
 ## Features
 
