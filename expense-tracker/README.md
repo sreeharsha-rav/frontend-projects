@@ -4,6 +4,8 @@ A simple expense tracker built with Vue 3 and TypeScript.
 
 ![Expense Tracker](./expense_tracker.gif)
 
+View the live demo [here](https://sreeharsha-rav.github.io/frontend-projects/)!.
+
 ## Features
 
 - Add, remove and edit transactions

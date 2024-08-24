@@ -6,7 +6,7 @@ import vue from '@vitejs/plugin-vue';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: '/frontend-projects/expense-tracker/',
+  base: '/frontend-projects/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
