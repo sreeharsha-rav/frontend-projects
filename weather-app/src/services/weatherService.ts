@@ -1,7 +1,7 @@
 import type { SearchLocation } from '../types/search';
 import type { ForecastResponse } from '../types/forecast';
 
-const API_URL = 'http://api.weatherapi.com/v1';
+const API_URL = 'https://api.weatherapi.com/v1';
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
 if (!API_KEY) {

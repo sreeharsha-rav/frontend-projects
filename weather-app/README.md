@@ -24,9 +24,9 @@ A simple weather app that uses the OpenWeatherMap API to get the weather data fo
 
 1. Clone the repository
 2. Install dependencies: `pnpm install`
-3. Create a `.env` file in the root directory and add your OpenWeatherMap API key:
+3. Create a `.env` file in the root directory and add your [Weather API key](https://www.weatherapi.com/) as follows:
    ```
-   VITE_OPENWEATHERMAP_API_KEY=your-api-key
+   VITE_WEATHERMAP_API_KEY=your-api-key
    ```
 4. Start the development server: `pnpm dev`
 
