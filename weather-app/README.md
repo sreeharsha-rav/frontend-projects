@@ -4,6 +4,10 @@ A simple weather app that uses the OpenWeatherMap API to get the weather data fo
 
 ![Weather App](./public/weather_app.gif)
 
+## Live Demo
+
+[Netlify](https://brilliant-rabanadas-fc36b6.netlify.app/)
+
 ## Features
 
 - Auto-complete city search
