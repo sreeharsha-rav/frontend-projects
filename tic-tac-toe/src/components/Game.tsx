@@ -1,5 +1,5 @@
 import Board from "./Board";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Score from "./Score";
 
 const styles = {
@@ -33,32 +33,11 @@ export default function TicTacToe({ aiOpponent = false }: { aiOpponent?: boolean
     const [xWins, setXWins] = useState(0);
     const [oWins, setOWins] = useState(0);
 
-    useEffect(() => {
-        if (aiOpponent && currentPlayer === "O" && !gameOver) {
-            const timer = setTimeout(makeAIMove, 500);  // Delay for better UX
-            return () => clearTimeout(timer);
-        }
-    }, [board, currentPlayer ]);
-
-    /**
-     * Makes a move for the AI opponent.
-     * It randomly selects an available square on the board.
-     */
-    const makeAIMove = () => {
-        const availableSquares = board.reduce((acc, square, index) => 
-            square === null ? acc.concat(index) : acc, [] as number[]);
-
-        if (availableSquares.length > 0) {
-            const randomIndex = Math.floor(Math.random() * availableSquares.length);
-            handleClick(availableSquares[randomIndex]);
-        }
-    };
-
     /**
      * Handles a player's move on the board.
      * @param {number} index - The index of the square to place the player's mark.
      */
-    const handleClick = (index: number) => {
+    const handleClick = useCallback((index: number) => {
         if (board[index] || gameOver) return;
 
         const newBoard = [...board];
@@ -78,7 +57,28 @@ export default function TicTacToe({ aiOpponent = false }: { aiOpponent?: boolean
         } else {
             setCurrentPlayer(currentPlayer === "X" ? "O" : "X");
         }
-    }
+    }, [board, currentPlayer, gameOver, xWins, oWins]);
+
+    /**
+     * Makes a move for the AI opponent.
+     * It randomly selects an available square on the board.
+     */
+    const makeAIMove = useCallback(() => {
+        const availableSquares = board.reduce((acc, square, index) => 
+            square === null ? acc.concat(index) : acc, [] as number[]);
+
+        if (availableSquares.length > 0) {
+            const randomIndex = Math.floor(Math.random() * availableSquares.length);
+            handleClick(availableSquares[randomIndex]);
+        }
+    }, [board, handleClick]);
+
+    useEffect(() => {
+        if (aiOpponent && currentPlayer === "O" && !gameOver) {
+            const timer = setTimeout(makeAIMove, 500);  // Delay for better UX
+            return () => clearTimeout(timer);
+        }
+    }, [aiOpponent, currentPlayer, gameOver, makeAIMove]);
 
     /**
      * Calculates the winner of the game.

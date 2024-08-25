@@ -1,8 +1,9 @@
 # Tic Tac Toe
 
 A simple Tic Tac Toe game in React with a computer opponent.
+[LIVE DEMO](https://tictactoe-ten.vercel.app/)
 
-![Tic Tac Toe](./public/tictactoe-ezgif.gif)
+![Tic Tac Toe](./tictactoe-ezgif.gif)
 
 ## Installation
 
