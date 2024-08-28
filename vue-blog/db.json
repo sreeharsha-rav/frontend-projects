@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Introduction to Vue.js",
+      "body": "Vue.js is a progressive JavaScript framework for building user interfaces. It is designed to be incrementally adoptable, making it easy to integrate into existing projects or start new ones.",
+      "author": "John Doe",
+      "createdAt": "10/10/2021",
+      "is_saved": false
+    },
+    {
+      "id": "2",
+      "title": "Getting Started with Pinia",
+      "body": "Pinia is a store library for Vue, it allows you to share a state across components/pages.",
+      "author": "Jane Smith",
+      "createdAt": "10/11/2021",
+      "is_saved": false
+    },
+    {
+      "id": "3",
+      "title": "Mastering Vue Router",
+      "body": "Vue Router is the official router for Vue.js. It deeply integrates with Vue.js core to make building Single Page Applications with Vue.js a breeze. It provides advanced features such as lazy loading, dynamic route matching, and navigation guards.",
+      "author": "Alex Johnson",
+      "createdAt": "10/12/2021",
+      "is_saved": false
+    }
+  ]
+}
