@@ -4,6 +4,8 @@
 
 A minimal blog built with Vue.js and Tailwind CSS. A development project to learn Vue 3 Composition API, Pinia, and Vue Router.
 
+![vue-blog](./vue-blog.gif)
+
 ### Features
 
 - Create new posts
