@@ -1,35 +1,66 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import PokemonInfo from "./components/PokemonInfo";
+import PokemonFilter from "./components/PokemonFilter";
+import PokemonTable from "./components/PokemonTable";
+import PokemonContext from "./PokemonContext";
+import styled from "@emotion/styled";
+
+import "./App.css";
+
+const Title = styled.h1`
+  text-align: center;
+`;
+
+const TwoColumnLayout = styled.div`
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-column-gap: 4rem;
+  margin-top: 1rem;
+`;
+
+const PageContainer = styled.div`
+  margin: auto;
+  padding: 1rem;
+`;
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [filter, filterSet] = React.useState("");
+  const [pokemon, pokemonSet] = React.useState(null);
+  const [selectedPokemon, selectedPokemonSet] = React.useState(null);
+
+  React.useEffect(() => {
+    fetch("/pokemon.json")
+      .then((resp) => resp.json())
+      .then((data) => pokemonSet(data));
+  }, []);
+
+  if (!pokemon) {
+    return <div>Loading data</div>;
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <PokemonContext.Provider 
+      value={{
+        filter,
+        filterSet,
+        pokemon,
+        pokemonSet,
+        selectedPokemon,
+        selectedPokemonSet,
+      }}
+    >
+    <PageContainer>
+      <Title>Pokemon Search</Title>
+      <TwoColumnLayout>
+        <div>
+          <PokemonFilter/>
+          <PokemonTable/>
+        </div>
+        <PokemonInfo/>
+      </TwoColumnLayout>
+    </PageContainer>
+    </PokemonContext.Provider>
+  );
 }
 
-export default App
+export default App;
