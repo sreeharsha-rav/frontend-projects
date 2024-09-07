@@ -1,4 +1,4 @@
-import { signInAction, signInWithGithub } from "@/app/actions";
+import { signInAction, signInWithGithub } from "@/app/auth_actions";
 import { FormMessage, Message } from "@/components/form-message";
 import { SubmitButton } from "@/components/submit-button";
 import { Input } from "@/components/ui/input";

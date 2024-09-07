@@ -29,9 +29,11 @@ function App() {
   const [selectedPokemon, selectedPokemonSet] = React.useState(null);
 
   React.useEffect(() => {
-    fetch("/pokemon.json")
-      .then((resp) => resp.json())
-      .then((data) => pokemonSet(data));
+    setTimeout(() => {
+      fetch("/pokemon.json")
+        .then((resp) => resp.json())
+        .then((data) => pokemonSet(data));
+    }, 1000);
   }, []);
 
   if (!pokemon) {
