@@ -56,39 +56,41 @@ export function CreateTweet() {
     // }
   };
 
-  if (!isAuthenticated) {
-    return null;
-  }
-
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className='flex items-center gap-3 px-4 py-3 border-b border-gray-200'
-    >
-      <Avatar className='h-10 w-10'>
-        <AvatarImage src='/placeholder-user.jpg' alt='Avatar' />
-        <AvatarFallback>JD</AvatarFallback>
-      </Avatar>
-      <div className='flex-1 relative'>
-        <Textarea
-          {...register('content')}
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-          placeholder="What's happening?"
-          className='resize-none border-0 focus:ring-0 focus:outline-none w-full'
-        />
-        {errors.content && (
-          <p className='text-red-500 text-sm mt-1'>{errors.content.message}</p>
-        )}
-        <Button
-          type='submit'
-          size='icon'
-          className='absolute w-8 h-8 top-2 right-2'
+    <>
+      {isAuthenticated && (
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className='flex items-center gap-3 px-4 py-3 border-b border-gray-200'
         >
-          <Send className='w-4 h-4' />
-          <span className='sr-only'>Submit Post</span>
-        </Button>
-      </div>
-    </form>
+          <Avatar className='h-10 w-10'>
+            <AvatarImage src='/placeholder-user.jpg' alt='Avatar' />
+            <AvatarFallback>JD</AvatarFallback>
+          </Avatar>
+          <div className='flex-1 relative'>
+            <Textarea
+              {...register('content')}
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              placeholder="What's happening?"
+              className='resize-none border-0 focus:ring-0 focus:outline-none w-full'
+            />
+            {errors.content && (
+              <p className='text-red-500 text-sm mt-1'>
+                {errors.content.message}
+              </p>
+            )}
+            <Button
+              type='submit'
+              size='icon'
+              className='absolute w-8 h-8 top-2 right-2'
+            >
+              <Send className='w-4 h-4' />
+              <span className='sr-only'>Submit Post</span>
+            </Button>
+          </div>
+        </form>
+      )}
+    </>
   );
 }

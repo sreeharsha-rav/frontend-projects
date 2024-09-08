@@ -16,6 +16,7 @@ export const Route = createFileRoute('/')({
 
 function Index() {
   //testEnvironmentVariables();
+  console.log('Rendering Index in main route');
 
   return <Feed />;
 }

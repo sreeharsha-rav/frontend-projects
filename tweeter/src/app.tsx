@@ -1,6 +1,6 @@
 import React from 'react';
 import { RouterProvider } from '@tanstack/react-router';
-import { ThemeProvider } from '@/contexts/ThemeProvider';
+import { ThemeProvider } from '@/contexts/ThemeContext';
 import { AuthProvider } from './contexts/AuthContext';
 import { router } from './main';
 
