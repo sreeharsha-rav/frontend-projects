@@ -35,6 +35,8 @@ function Initials({ name }: { name: string }) {
 
 export function Tweet(props: TweetProps) {
   const { name, username, content, likes } = props;
+
+  console.log('Rendering Tweet for', name);
   return (
     <div className='flex items-start gap-3'>
       <Avatar className='h-10 w-10'>

@@ -56,6 +56,8 @@ export function CreateTweet() {
     // }
   };
 
+  console.log('Rendering CreateTweet with isAuthenticated:', isAuthenticated);
+
   return (
     <>
       {isAuthenticated && (

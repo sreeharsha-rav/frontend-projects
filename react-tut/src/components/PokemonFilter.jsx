@@ -10,13 +10,17 @@ const Input = styled.input`
   border: 1px solid #ccc;
 `;
 
+const handleChange = (evt, filterSet) => {
+  filterSet(evt.target.value);
+};
+
 const PokemonFilter = () => {
   const { filter, filterSet } = React.useContext(PokemonContext);
   return (
     <Input
       type="text"
       value={filter}
-      onChange={(evt) => filterSet(evt.target.value)}
+      onChange={(evt) => handleChange(evt, filterSet)}
     />
   );
 }
